@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var name = ""
+    @State private var address = ""
+    @State private var city = ""
     @FocusState private var focusedField: Field?
 
     var body: some View {
@@ -16,9 +18,9 @@ struct ContentView: View {
             Form {
                 TextField("Name", text: $name)
                     .focused($focusedField, equals: .name)
-                TextField("Address", text: $name)
+                TextField("Address", text: $address)
                     .focused($focusedField, equals: .address)
-                TextField("City", text: $name)
+                TextField("City", text: $city)
                     .focused($focusedField, equals: .city)
             }
             .navigationTitle("Keyboard bar test")
