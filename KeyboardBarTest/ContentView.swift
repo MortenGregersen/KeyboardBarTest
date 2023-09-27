@@ -30,8 +30,7 @@ struct ContentView: View {
                         guard let focusedField, let index = Field.allCases.firstIndex(of: focusedField) else { return }
                         let previousIndex = Field.allCases.index(before: index)
                         guard previousIndex >= 0 else { return }
-                        let previousField = Field.allCases[previousIndex]
-                        self.focusedField = previousField
+                        self.focusedField = Field.allCases[previousIndex]
                     } label: {
                         Label("Previous", systemImage: "chevron.backward")
                     }
@@ -39,8 +38,7 @@ struct ContentView: View {
                         guard let focusedField, let index = Field.allCases.firstIndex(of: focusedField) else { return }
                         let nextIndex = Field.allCases.index(after: index)
                         guard nextIndex < Field.allCases.count else { return }
-                        let nextField = Field.allCases[nextIndex]
-                        self.focusedField = nextField
+                        self.focusedField = Field.allCases[nextIndex]
                     } label: {
                         Label("Next", systemImage: "chevron.forward")
                     }
@@ -49,6 +47,9 @@ struct ContentView: View {
                         focusedField = nil
                     }
                 }
+            }
+            .onAppear {
+                focusedField = .name
             }
         }
     }
