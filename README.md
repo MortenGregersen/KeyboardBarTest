@@ -52,27 +52,27 @@ When the Form IS NOT inside a TabView, it works as expected. When the Form IS in
 Here is also an interesting case:
 1. Open the test project (where the EntryFormView IS inside a TabView).
 2. Tap inside the “Name” TextField to give it focus.
-2-1. The Xcode log shows the following message: `<0x104707bc0> Gesture: System gesture gate timed out.`
+    1. The Xcode log shows the following message: `<0x104707bc0> Gesture: System gesture gate timed out.`
 3. Tap “Enter” on the keyboard, and the keyboard will disappear.
-3-1. The Xcode log shows the following message: `CAReportingClient.mm:532 Attempted to remove a reporter not created by this client { careporter_id=5.153.960.755.201 }`
+    1. The Xcode log shows the following message: `CAReportingClient.mm:532 Attempted to remove a reporter not created by this client { careporter_id=5.153.960.755.201 }`
 4. Tap inside the “Name” TextField again to give it focus.
-4-1. The Xcode log shows the following message: `-[RTIInputSystemClient remoteTextInputSessionWithID:performInputOperation:]  perform input operation requires a valid sessionID`
+    1. The Xcode log shows the following message: `-[RTIInputSystemClient remoteTextInputSessionWithID:performInputOperation:]  perform input operation requires a valid sessionID`
 5. Tap “Enter” on the keyboard, and the keyboard will disappear.
-5-1. The Xcode log shows the following message: `CAReportingClient.mm:532 Attempted to remove a reporter not created by this client { careporter_id=5.153.960.755.201 }`
+    1. The Xcode log shows the following message: `CAReportingClient.mm:532 Attempted to remove a reporter not created by this client { careporter_id=5.153.960.755.201 }`
 6. Tap the “Start” tab on the TabView.
 7. Tap the “Form” tab on the TabView.
 8. Tap inside the “Name” TextField again to give it focus.
-8-1. The keyboard toolbar is now visible.
-8-2. The Xcode log shows A LOT of messages about unsatisfiable contraints (see attached KeyboardTabBar-log.txt file).
+    1. The keyboard toolbar is now visible.
+    2. The Xcode log shows A LOT of messages about unsatisfiable contraints (see attached KeyboardTabBar-log.txt file).
 
 In my app, Score Wonders ([available on the App Store](https://apps.apple.com/us/app/score-wonders/id1671023841)) I also see an interesting case (video attached).
 1. Open the app (in the video it is a TestFlight build, but the same happens with the current App Store version on iOS 17.1 beta 3).
 2. Go to the “Calculator” (third) tab.
 3. Tap inside the first TextField to give it focus.
-3-1. No toolbar is shown above the keyboard/keypad.
+    1. No toolbar is shown above the keyboard/keypad.
 4. Send the app to the background.
 5. Open the app again.
-5-1. The toolbar is now shown above the keyboard/keypad.
+    1. The toolbar is now shown above the keyboard/keypad.
 
 https://github.com/MortenGregersen/KeyboardBarTest/assets/759680/64d9b7d7-5d11-446b-9b07-6c793b4c03be
 
