@@ -63,7 +63,7 @@ Here is also an interesting case:
 7. Tap the “Form” tab on the TabView.
 8. Tap inside the “Name” TextField again to give it focus.
 8-1. The keyboard toolbar is now visible.
-8-2. The Xcode log shows A LOT of messages about unsatisfiable contraints (see attached txt file).
+8-2. The Xcode log shows A LOT of messages about unsatisfiable contraints (see attached KeyboardTabBar-log.txt file).
 
 In my app, Score Wonders ([available on the App Store](https://apps.apple.com/us/app/score-wonders/id1671023841)) I also see an interesting case (video attached).
 1. Open the app (in the video it is a TestFlight build, but the same happens with the current App Store version on iOS 17.1 beta 3).
