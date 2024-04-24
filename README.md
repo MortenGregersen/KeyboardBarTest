@@ -84,3 +84,7 @@ https://github.com/MortenGregersen/KeyboardBarTest/assets/759680/64d9b7d7-5d11-4
 Both built with Xcode 15.0 (15A240d)
 
 https://github.com/MortenGregersen/KeyboardBarTest/assets/759680/904dc5c2-f0eb-4b35-b581-3e86b7748e04
+
+## Update April 24th 2024
+
+The bug is still reproducable with Xcode 15.4 and iOS 17.4. This has been reported to Apple on the above feedback.
